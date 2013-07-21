@@ -1,0 +1,44 @@
+<div id="left-col" class="terms">
+
+    <h1><?php echo $seccion->titulo;?></h1>
+
+    <div class="form">
+
+	<?php echo $seccion->texto;?>
+
+	<? if(!empty($aErrorMsj)){?> <p style="font-weight:bold;"><br/><?php echo $aErrorMsj;?><br/><br/> </p><?php }?>
+	<form action="<?php echo $url->urlAmigables('index.php?controlador=contacto&amp;accion=enviar',1);?>" method="post">
+
+	    <fieldset>
+
+		<label>Nombre y apellido</label><input type="text" name="nombre" id="nombre" onblur="notEmpty(this.id)" <?php if(!empty($aError['nombre'])){echo 'class="inputError"';}?> value="<?php echo $form->nombre;?>"/>
+		<label>Ciudad / Provincia</label><input type="text" name="ciudad" id="ciudad" onblur="notEmpty(this.id)" <?php if(!empty($aError['ciudad'])){echo 'class="inputError"';}?> value="<?php echo $form->ciudad;?>"/>
+		<label>Teléfono / Celular</label><input type="text" name="tel" id="tel" onblur="notEmpty(this.id)" <?php if(!empty($aError['tel'])){echo 'class="inputError"';}?> value="<?php echo $form->tel;?>"/>
+		<label>E-mail</label><input type="text" name="email" id="email" onblur="notEmpty(this.id)" <?php if(!empty($aError['email'])){echo 'class="inputError"';}?> value="<?php echo $form->email;?>"/>
+		<label>Consulta</label>
+		<textarea cols="0" rows="0" name="comentario" id="comentario" onblur="notEmpty(this.id)" <?php if(!empty($aError['comentario'])){echo 'class="inputError"';}?>><?php echo $form->comentario;?></textarea>
+
+		<div class="buttons">
+		    <button type="reset" name="">limpiar</button>
+		    <button type="submit" name="">enviar</button>
+		</div><!-- End buttons -->
+
+	    </fieldset>
+
+	</form>
+	<script type="text/javascript">
+	    function notEmpty(mElemento) {
+		sElem = '#' + mElemento;
+		if ($(sElem).val() == '') {
+		    $(sElem).addClass('inputError');
+		} else {
+		    $(sElem).removeClass('inputError');
+		}
+	    }
+	</script>
+
+    </div><!-- End form -->
+
+    <div class="line">&nbsp;</div>
+
+</div><!-- End left-col -->

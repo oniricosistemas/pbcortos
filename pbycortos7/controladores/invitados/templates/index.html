@@ -1,0 +1,42 @@
+<div id="left-col" class="terms">
+
+    <h1><?php echo $seccion->titulo;?></h1>
+
+    <?php echo $seccion->texto;?>
+
+    <div class="clear20">&nbsp;</div>
+    <?php
+	    if(!empty($invitados)){
+		for($i=0;$i<count($invitados);$i++){?>
+	    <div class="block">
+
+		<h4><?php echo $invitados[$i]['nombre'];?></h4>
+
+		<?php
+		    if(!empty($invitados[$i]['foto'])){?>
+		<img src="<?php echo $config->get('urlImagenes').$invitados[$i]['foto'];?>" alt="<?php echo $invitados[$i]['nombre'];?>" />
+		<?php
+		    }
+		    ?>
+		<div class="text2 small">
+
+		    <?php echo $invitados[$i]['intro'];?>
+		    <?php if(!empty($invitados[$i]['texto'])){?>
+		    <a href="#" rel="hidden1" class="more">seguir leyendo &raquo;</a>
+
+		    <div class="hidden"><?php echo $invitados[$i]['texto'];?></div>
+		    <?php
+			 }
+			 ?>
+
+		</div><!-- End text -->
+
+	    </div><!-- End block -->
+	    <div class="line">&nbsp;</div>
+	    <?php
+		}// fin for
+	    }//fin if
+	    ?>
+	<p><a href="index.php" class="red">&laquo; volver</a></p>
+
+</div><!-- End left-col -->

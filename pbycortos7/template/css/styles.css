@@ -1,0 +1,345 @@
+/* [G] Maqueteishon Framework Stylesheet */
+@charset "utf-8";
+body {
+    background: url(../images/bg.jpg) repeat #f6e5d3;
+}
+
+.head{
+    background: #fff;
+    height: 310px;
+}
+.head h1.logo a {
+    background: url("../images/logo.jpg") no-repeat scroll 0 0 transparent;
+    display: inline;
+    float: left;
+    height: 162px;
+    overflow: hidden;
+    text-indent: -9999em;
+    width: 411px;
+}
+.menu{
+    background: url(../images/menu.jpg) repeat #fac300;
+    height: 36px;
+}
+.menu ul li{
+    display: block;
+    float: left;
+    margin: 5px 0 0 40px;
+}
+.menu ul li a{
+    color: #000;
+    font-family: 'HelveticaMedCond';
+    font-size: 15px;
+
+}
+.destacados{
+    background: #939393;
+    height: 300px;
+}
+.destacados p{
+    margin: 10px 0 0 15px;
+}
+.destacados .items{
+    float: left;
+    width: 621px;
+}
+.destacados .nav {
+    padding: 7px 0 0;
+    position: absolute;
+    right: -4px;
+    top: 250px;
+    width: 85px;
+    z-index: 9999;
+}
+.info{
+    background: #000;
+    color: #fff;
+    font-family: "tahoma";
+    font-size: 14px;
+    height: 49px;
+    position: absolute;
+    right: 0;
+    top: 250px;
+    width: 100%;
+}
+.info a{
+    color: #fff;
+}
+.contenido{
+    margin: 10px 0 0 0;
+}
+.mainBody{
+    background: #fff;
+    padding-bottom: 95px;
+}
+.frase{
+    color: #565656;
+    font-family: 'Arial';
+    font-size: 14px;
+    font-style: italic;
+    margin: 20px;
+    text-align: justify;
+    width: 500px;
+}
+.frase p{
+	font-size: 14px;
+}
+.firma{
+	font-family: 'Arial';
+    font-size: 14px;
+    font-style: italic;
+	font-weight: bold;
+    text-align: right;
+}
+.titulo{
+    background: url("../images/noticias.jpg") no-repeat scroll 0 0 transparent;
+    font-family: 'HelveticaNeueCondensed';
+    height: 36px;
+    width: 540px;
+    text-indent: -9999em;
+}
+.video {
+    display: inline;
+    float: left;
+    height: 265px;
+    padding-bottom: 10px;
+    margin: 8px 0 0 0;
+}
+.columns .video video, .columns .video iframe, .columns .video object, .columns .video embed{
+    height: 265px;
+    width: 320px;
+}
+.nombre {
+    color: #646464;
+    font-family: "Tahoma";
+    font-size: 11px;
+    margin: 0 70px;
+}
+#video1, #video2, #video3{
+    margin: 0 0 0 55px;
+}
+ul.socialb{
+    margin-left: 30px;
+    overflow: hidden;
+}
+.socialb li{
+    float: left;
+}
+aside h2 {
+    color: #646464;
+    font-family: "Tahoma";
+    font-size: 18px;
+    margin: 0 40px;
+}
+
+hr{
+    border-bottom: 1px dotted;
+}
+
+article{
+    color: #646464;
+    font-family: "Tahoma";
+    font-size: 11px;
+    overflow: hidden;
+    padding: 10px 0 0 15px;
+}
+article section{
+    float: left;
+    font-family: "Tahoma";
+    width: 368px;
+}
+article section p{
+    font-family: "Tahoma";
+    font-size: 11px;
+}
+article .fecha{
+    color: #f29400;
+    font-size: 10px;
+}
+article h2{
+    color: #000;
+    font-family: "Tahoma";
+    font-size: 14px;
+}
+.imagen {
+    float: left;
+    height: 146px;
+    margin-right: 10px;
+    width: 146px;
+}
+#social{
+    float: left;
+    margin: 5px 0;
+    width: 100%;
+}
+#social li{
+    float: left;
+    margin-left: 10px;
+}
+#social li.tw iframe{
+    position: inherit;
+}
+.hidden {
+    color: #3B3B3B;
+    display: none;
+    font-size: 11px;
+    height: auto;
+    margin: 10px 0 0;
+    text-align: justify;
+
+}
+.titpeli{
+    background: url("../images/peliculas.jpg") no-repeat scroll 0 0 transparent;
+    font-family: 'HelveticaNeueCondensed';
+    height: 36px;
+    width: 540px;
+    text-indent: -9999em;
+}
+.titjurado{
+    background: url("../images/bar_jurado.jpg") no-repeat scroll 0 0 transparent;
+    font-family: 'HelveticaNeueCondensed';
+    height: 36px;
+    width: 540px;
+    text-indent: -9999em;
+}
+.titediciones{
+    background: url("../images/bar_edicionesanteriores.jpg") no-repeat scroll 0 0 transparent;
+    font-family: 'HelveticaNeueCondensed';
+    height: 36px;
+    width: 540px;
+    text-indent: -9999em;
+}
+.titprensa{
+    background: url("../images/bar_prensa.jpg") no-repeat scroll 0 0 transparent;
+    font-family: 'HelveticaNeueCondensed';
+    height: 36px;
+    width: 540px;
+    text-indent: -9999em;
+}
+.titcortos{
+    background: url("../images/bar_cortosseleccionados.jpg") no-repeat scroll 0 0 transparent;
+    font-family: 'HelveticaNeueCondensed';
+    height: 36px;
+    width: 540px;
+    text-indent: -9999em;
+}
+.block1 {
+    clear: both;
+    float: left;
+    font-family: "Tahoma";
+    padding: 5px 0 0;
+    width: 100%;
+}
+.block1 .pelimg {
+    float: left;
+    height: 196px;
+    margin-left: 10px;
+    width: 132px;
+}
+.block1 h4 {
+    color: #000;
+    font-size: 16px;
+    margin: 0 0 0 10px;
+}
+.block1 .text21 {
+    float: left;
+    margin-bottom: 15px;
+    margin-left: 17px;
+    width: 380px;
+}
+.block1 p {
+    color: #000;
+    font-family: "tahoma";
+    font-size: 11px;
+    margin: 0;
+    text-align: justify;
+}
+.block1 img{
+    float: left;
+    margin: 10px;
+}
+.block {
+    float: left;
+    padding: 5px 0 0 15px;
+    width: 100%;
+}
+.block .edimg{
+    float: left;
+}
+.block .text {
+    display: inline;
+    float: left;
+    margin: 0 0 0 15px;
+    width: 320px;
+}
+.block h3 {
+    color: #3B3B3B;
+    font-size: 14px;
+    font-weight: normal;
+}
+.block .text a {
+    color: #D04526;
+}
+.terms p {
+    color: #FFFFFF;
+    line-height: 15px;
+    margin: 15px 0 0;
+}
+.volver{
+    color:#D04526!important;
+    margin-left: 10px!important;
+    width: 100px!important;
+}
+
+/* footer */
+.footer {
+    background: #fff;
+}
+
+
+/* codigo para la navegacion */
+#navigation {
+    /*background-color: #eee;
+    border: 1px solid #ccc;*/
+    margin: 0 10px 10px 10px;
+    text-align: right;
+    padding: 9px 5px 10px 0;
+    white-space: nowrap;
+    font: 12px Tahoma;
+    clear:both;
+}
+
+span.navthis {
+    padding: 3px 8px;
+    /*background-color: #eee;*/
+    color: #f29400;
+    font-weight: bold;
+    font-size: 10px;
+}
+a.nav {
+    padding: 4px 6px;
+    color: #545454;
+    text-decoration: none;
+}
+a.nav:hover {
+    padding: 3px 6px;
+    color: #000;
+    background-color: #FFC68C;
+    border: 1px solid #FFA851;
+}
+
+/* alinear imagenes */
+.imagenizq{
+    float: left;
+    margin: 5px 5px 5px 5px;
+    display: block;
+}
+.imagender{
+    float: right;
+    margin: 5px 5px 5px 5px;
+    display: block;
+}
+.imgcentrar {
+    margin: 5px auto;
+    display: block
+}

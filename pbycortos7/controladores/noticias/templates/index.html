@@ -1,0 +1,49 @@
+<div id="left-col" class="news">
+
+    <p><span><?php echo $utilidades->cambiarFecha($noticia->fecha,4);?></span></p>
+    <h1><?php echo $noticia->titulo;?></h1>    
+    <?php
+    $debug->log($noticia);
+	if(!empty($noticia->imagen)){?>
+    <img src="<?php echo $config->get('urlImagenes').$noticia->imagen;?>" alt="<?php echo $noticia->titulo;?>" />
+    <?php
+	}
+	?>
+    <?php
+	echo $noticia->intro;	
+	if(empty($noticia->video)){
+	echo $noticia->texto;
+	echo '<p><a href="index.php" title="volver" class="volver">Volver</a></p>';
+	}
+	else{
+	?>
+
+    <div class="section">
+
+	<div class="video">
+
+	    <div id="video1">
+		<script type="text/javascript">
+		    var flashvars = {};
+		    var params = {};
+		    params.wmode = "transparent";
+		    params.menu = "false";
+		    var attributes = {};
+		    swfobject.embedSWF("<?php echo str_replace('&','&amp;',$noticia->video);?>", "video1", "300", "265", "9.0.0", false, flashvars, params, attributes);
+
+		</script>
+	    </div>
+
+
+	</div><!-- End video -->
+
+	<?php
+	echo $noticia->texto;
+	?>
+	<p><a href="index.php" title="volver" class="volver">Volver</a></p>
+    </div><!-- End section -->
+    <?php
+    }
+    ?>   
+
+</div><!-- End left-col -->

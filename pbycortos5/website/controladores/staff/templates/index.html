@@ -1,0 +1,65 @@
+<div id="left-col" class="press">
+
+            <h1>Staff</h1>
+
+            <div class="staff">
+
+                <img src="<?php echo $config->get('base').'pbycortos5/'.$config->get('viewsFolder');?>images/staff-img1.jpg" alt="" />
+		<?php
+		if(!empty($staff)){		
+		    for($i=0;$i<count($staff);$i++){
+			if($staff[$i]['cargo']=='Padrino del Festival'){?>
+		    <p class="large"><span><?php echo $staff[$i]['nombre'];?> / </span><?php echo $staff[$i]['cargo'];?></p>
+			<?php
+			}
+			if($staff[$i]['cargo']=='Director General'){
+			?>
+		    <p><span><?php echo $staff[$i]['nombre'];?> /</span> <?php echo $staff[$i]['cargo'];?> <br />
+			<?php
+			}
+			if($staff[$i]['cargo']=='Producción'){
+			?>
+		    <span><?php echo $staff[$i]['nombre'];?> /</span> <?php echo $staff[$i]['cargo'];?> <br />
+			 <?php
+			}
+			if($staff[$i]['cargo']=='Gráfica y diseño'){
+			?>
+		    <span><?php echo $staff[$i]['nombre'];?> /</span> <?php echo $staff[$i]['cargo'];?> <br />
+			 <?php
+			}
+			if($staff[$i]['cargo']=='Prensa y difusión'){
+			?>
+		    <span><?php echo $staff[$i]['nombre'];?> /</span> <?php echo $staff[$i]['cargo'];?> <br />
+			 <?php
+			}
+			if($staff[$i]['cargo']=='Montaje'){
+			?>
+		    <span><?php echo $staff[$i]['nombre'];?> /</span> <?php echo $staff[$i]['cargo'];?> <br />
+			 <?php
+			}
+			if($staff[$i]['cargo']=='Programación web'){
+			?>
+		    <span><?php echo $staff[$i]['nombre'];?> /</span> <?php echo $staff[$i]['cargo'];?> <br />
+			 <?php
+			}
+			if($staff[$i]['cargo']=='Colaborador'){
+			?>
+		    <span><?php echo $staff[$i]['nombre'];?> /</span> <?php echo $staff[$i]['cargo'];?> <br />
+			 <?php
+			}
+			?>		    
+		    <?php
+		    }// fin for
+		    ?>
+		    </p>
+		    <?php
+		}//fin if
+		?>
+
+            </div><!-- End staff -->
+
+            <div class="line">&nbsp;</div>
+
+            <p><a href="index.php" class="red">&laquo; volver</a></p>
+
+        </div><!-- End left-col -->

@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    #links generales
+    RewriteRule index.php$ index.php?controlador=index [L]
+    RewriteRule index/Pagina/([0-9]+).php$ index.php?controlador=index&verPagina=$1 [L]
+
+    RewriteRule bases-y-condiciones.php$ index.php?controlador=secciones&id=1 [L]
+    RewriteRule jurado.php$ index.php?controlador=jurado [L]
+    RewriteRule invitados.php$ index.php?controlador=invitados [L]
+    RewriteRule ediciones.php$ index.php?controlador=ediciones [L]
+    RewriteRule prensa.php$ index.php?controlador=prensa [L]
+    RewriteRule staff.php$ index.php?controlador=staff [L]
+    
+    RewriteRule noticias/([0-9]+)/([a-zA-Z0-9_-]+).php$ index.php?controlador=noticias&accion=index&id=$1&titulo=$2 [L]
+
+    RewriteRule contacto.php$ index.php?controlador=contacto [L]
+    RewriteRule contacto/enviar.php$ index.php?controlador=contacto&accion=enviar [L]
+
+   
+</IfModule>

@@ -1,0 +1,45 @@
+<div id="left-col" class="home">
+    <?php
+    $i=1;
+    ?>
+    <?php
+    //$paginador->linkEstructura('index/Pagina/{n}.php');
+    while ($noticia=$paginador->fetchResultado()){
+    ?>
+    <?php
+    switch($i){
+	case '1':
+	  echo '<div class="box">';
+	break;
+	case '2':
+	  echo '<div class="box even">';
+	break;
+	case '3':
+	  echo '<div class="box last">';
+	break;
+	case '4':
+	  echo '<div class="box even last">';
+	break;
+    }
+    ?>
+		    <p><span><?php echo $utilidades->cambiarFecha($noticia['fecha'],1);?></span></p>
+		    <h1><?php echo $noticia['titulo'];?></h1>
+
+		    <?php echo $utilidades->cortarTexto($noticia['intro'],192,array('ending'=>' ...','exact'=>false,'html'=>true));?>
+
+		    <p><a href="<?php echo $url->urlAmigables('index.php?controlador=noticias&amp;id='.$noticia['id'].'&amp;titulo='.$utilidades->validarNombreArchivo($noticia['titulo']),1);?>">seguir leyendo &raquo;</a></p>
+
+		    <?php
+	    if(!empty($noticia['imagen'])){?>
+		    <p><img src="<?php echo $config->get('urlImagenes').$noticia['imagen'];?>" alt="<?php echo $noticia['titulo'];?>" /></p>
+		    <?php
+	    }
+	    ?>
+		</div><!-- End box -->
+
+		<?php
+		$i++;
+		}
+		?>
+		<?php echo "<div id='navigation'>".$paginador->fetchNavegacion()."</div>";?>
+	    </div><!-- End left-col -->

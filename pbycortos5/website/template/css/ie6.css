@@ -1,0 +1,15 @@
+/* html { 
+   width: expression( document.body.clientWidth > 776 ? "777px" : "auto" ); /* max-width IE6 */
+/* } */
+
+/* html { 
+   width: expression( document.body.clientWidth < 334 ? "333px" : "auto" ); /* min-width IE6 */
+/* } */
+
+/* html { 
+   height: expression( this.scrollHeight > 332 ? "333px" : "auto" ); /* max-height IE6 */
+/* } */
+
+/* html { 
+   height: expression( this.scrollHeight < 334 ? "333px" : "auto" ); /* min-height IE6 */
+/* } */

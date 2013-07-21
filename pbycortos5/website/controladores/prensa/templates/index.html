@@ -1,0 +1,31 @@
+<div id="left-col" class="press">
+
+    <h1>Prensa</h1>
+
+    <div class="clear50">&nbsp;</div>
+
+    <?php
+    for($i=0;$i<count($prensa);$i++){?>
+    <div class="high-block">
+	<a href="<?php echo $config->get('urlImagenes').$prensa[$i]['imagen'];?>" rel="galeria" title="&nbsp;">
+	    <img src="<?php echo $config->get('urlImagenes').$prensa[$i]['imagen_thumb'];?>" alt="&nbsp;"/>
+	</a>
+
+	<?php
+	  $pre = str_replace('<p>','',str_replace('</p>','',$prensa[$i]['texto']));
+	  echo "<p>";
+	  echo $pre;
+	  if(!empty($prensa[$i]['fecha']) && $prensa[$i]['fecha']!='0000-00-00'){
+	  echo " (".$prensa[$i]['fecha'].")";
+	  }
+	  echo "</p>";
+	  ?>
+    </div><!-- End high-block -->
+
+    <div class="line">&nbsp;</div>
+    <?php
+    }
+    ?>
+
+    <p class="margin"><a href="index.php" class="red">&laquo; volver</a></p>
+</div><!-- End left-col -->
